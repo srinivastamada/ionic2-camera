@@ -13,7 +13,12 @@ export class CameraPage {
   }
 
   deletePhoto(index){
-   this.photos.slice(index, 1);
+   
+   this.photos.splice(index, 1);
+    console.log("XXXXXXXXXXXXXXXXXXXX");
+  alert(this.photos.length);
+   //return this.photos;
+  // return this.photos.slice(index, 1);
   }
 
   takePhoto() {

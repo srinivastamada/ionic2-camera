@@ -1,6 +1,9 @@
 page-camera {
 .deleteIcon{
-position: absolute !important; color:#ffffff !important; margin-left:90% !important
+position: absolute !important; color:#ffffff !important; margin-left:80% !important;
+}
+.deleteIcon:before{
+    font-size:30px !important;
 }
 .releative{
     position: relative
