@@ -25,13 +25,13 @@ export class HomePage {
         message: '',
         buttons: [
           {
-            text: 'Disagree',
+            text: 'No',
             handler: () => {
               console.log('Disagree clicked');
 
             }
           }, {
-            text: 'Agree',
+            text: 'Yes',
             handler: () => {
               console.log('Agree clicked');
               this

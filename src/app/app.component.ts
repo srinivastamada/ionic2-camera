@@ -2,13 +2,11 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { CameraService } from './services/camera.service';
 import { TabsPage } from '../pages/tabs/tabs';
 
 
 @Component({
-  templateUrl: 'app.html',
-  providers: [CameraService]
+  templateUrl: 'app.html'
 })
 export class MyApp {
   rootPage = TabsPage;
