@@ -19,14 +19,14 @@ export class CameraPage {
     let confirm = this
       .alertCtrl
       .create({
-        title: 'Use this lightsaber?',
-        message: 'Do you agree to use this lightsaber to do good across the intergalactic galaxy?',
+        title: 'Sure you want to delete this update? There is NO undo!',
+        message: '',
         buttons: [
           {
             text: 'Disagree',
             handler: () => {
               console.log('Disagree clicked');
-              return false;
+
             }
           }, {
             text: 'Agree',
@@ -35,7 +35,7 @@ export class CameraPage {
               this
                 .photos
                 .splice(index, 1);
-              return true;
+              //return true;
             }
           }
         ]
@@ -45,7 +45,7 @@ export class CameraPage {
 
   takePhoto() {
     const options : CameraOptions = {
-      quality: 100,
+      quality: 50,
       destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE
