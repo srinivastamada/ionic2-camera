@@ -10,22 +10,23 @@
   <button ion-button full (click)='takePhoto()'>Take Photo</button>
 
 
-  <!--<ion-grid>
+  <ion-grid>
     <ion-row>
       <ion-col col-6 >
         <ion-card class="releative">
-          <ion-icon name="close" class="deleteIcon"></ion-icon>
+          <ion-icon  ios="ios-add-circle" md="md-add-circle" class="deleteIcon" (click)="deletePhoto(2)"></ion-icon>
          <img src="https://ionicframework.com/dist/preview-app/www/assets/img/card-saopaolo.png" />
         </ion-card>
       </ion-col>
     </ion-row>
-  </ion-grid>-->
+  </ion-grid>
 
   <ion-grid>
     <ion-row>
       <ion-col col-6 *ngFor="let photo of photos; let id = index">
         <ion-card class="releative">
-          <ion-icon name="close" class="deleteIcon" (click)="deletePhoto(id)"></ion-icon>
+          
+          <ion-icon  ios="ios-add-circle" md="md-add-circle"class="deleteIcon" (click)="deletePhoto(id)"></ion-icon>
          <img [src]="photo" *ngIf="photo" />
         </ion-card>
       </ion-col>
