@@ -8,7 +8,7 @@ import {Camera, CameraOptions} from '@ionic-native/camera';
 })
 export class HomePage {
 
-  photos : any;
+  public photos : any;
   public base64Image : string;
   constructor(public navCtrl : NavController, private camera : Camera, private alertCtrl : AlertController) {}
 
@@ -17,7 +17,6 @@ export class HomePage {
   }
 
   deletePhoto(index) {
-
     let confirm = this
       .alertCtrl
       .create({
@@ -28,7 +27,6 @@ export class HomePage {
             text: 'No',
             handler: () => {
               console.log('Disagree clicked');
-
             }
           }, {
             text: 'Yes',
@@ -48,16 +46,15 @@ export class HomePage {
   takePhoto() {
     const options : CameraOptions = {
       quality: 50,
-      destinationType: this.camera.DestinationType.DATA_URL,
+      destinationType: this.camera.DestinationType.FILE_URI,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE
     }
-
     this
       .camera
       .getPicture(options)
       .then((imageData) => {
-        this.base64Image = "data:image/jpeg;base64," + imageData;
+        this.base64Image = "file://" + imageData;
         this
           .photos
           .push(this.base64Image);
