@@ -1,6 +1,8 @@
 {
-  "name": "Ionic Camera",
-  "app_id": "f1fb6525",
-  "v2": true,
-  "typescript": true
+  "name": "ionic-camera",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }
