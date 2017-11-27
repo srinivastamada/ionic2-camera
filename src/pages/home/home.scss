@@ -1,0 +1,13 @@
+page-home {
+    .block {
+      position: relative;
+      .deleteIcon {
+        position: absolute !important;
+        color: #ffffff !important;
+        margin-left: 80% !important;
+      }
+      .deleteIcon:before {
+        font-size: 30px !important;
+      }
+      }
+    }
