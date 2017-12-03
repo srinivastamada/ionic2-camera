@@ -7,5 +7,14 @@
 </ion-header>
 
 <ion-content padding>
-
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 *ngFor="let image of images;">
+        <ion-card class="block">
+          <ion-icon name="trash" class="deleteIcon" ></ion-icon>
+          <img src="data:image/png;base64,{{image.b64}}" *ngIf="image.b64"  style="height: 200px;width:100px"/>
+        </ion-card>
+</ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
